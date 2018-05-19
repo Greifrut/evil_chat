@@ -2,7 +2,7 @@ class ChatController < ApplicationController
     before_action :authenticate!
 
     def show
-        @messages = Message.order(create_at: :asc).last(20)
+        @messages = Message.order(created_at: :asc).last(20)
     end
 
     private
